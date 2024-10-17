@@ -24,10 +24,11 @@ else:
 current_player = player
 winner = None
 game_running = True
-high_score_p1 = 0
+high_score_p1 = 0   # räknar spelare 1:s poäng
 high_score_p2 = 0
-high_score_single = 0
+high_score_single = 0  # räknar poäng när man spelar själv
 
+# hur datorn gör drag
 def computer_move():
     global computer
     valid_move = False
@@ -242,7 +243,7 @@ class Start:
                        print(f"\nVinnaren är: {winner}")
                 break  
             else:
-                if current_player == player:
+                if current_player == player:  # byter mellan datporn och spelaren
                     current_player = computer
                 else:
                     current_player = player
